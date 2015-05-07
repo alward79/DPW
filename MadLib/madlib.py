@@ -39,7 +39,7 @@ if int(numbers[1]) <= 20:
     i=0
     x = int(numbers[1])
     while i < x:
-        print + str(x) + " bottles of "+ liquid + " on the wall"
+        print str(x) + " bottles of "+ liquid + " on the wall"
         x = x-1
 else:
-    pass
+    print "Wow! That must have been a long trip, you guys sang " +numbers[1]+ " bottles of " +liquid+ " on the wall."
