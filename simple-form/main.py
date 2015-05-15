@@ -102,6 +102,7 @@ class MainHandler(webapp2.RequestHandler):#declaring a class
             </body>
         </html>
         '''
+        #page_error will display if user doesn't enter info in required fields
         page_error =''' <h3>The must be completed to continue</h3>'''
         #this if statement checks to see if a request was made from the page
         if self.request.GET:
