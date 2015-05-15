@@ -108,7 +108,7 @@ class MainHandler(webapp2.RequestHandler):#declaring a class
             #If so this will ensure that the fields are not blank
             if self.request.GET["first"] != "" and self.request.GET["last"] != "" and self.request.GET["email"] != "" and self.request.GET["address"] != "":
 
-                #if the fields aren't blank this will store the users input
+                #if the fields aren't blank these variables will store the users input
                 first_name = self.request.GET["first"]
                 last_name = self.request.GET["last"]
                 email = self.request.GET["email"]
