@@ -1,0 +1,36 @@
+/* #Typography
+================================================== */
+h1, h2{
+	font-family: 'Aguafina Script', cursive;
+	color: #069;
+}
+h3{
+    color: #069;
+}
+/* #Forms
+================================================== */
+form{
+    width: 60%;
+	border: 1px solid #9d9da0;
+	padding: 10px;
+	margin: 0px 0px 20px 30px;
+	border-radius: 8px;
+	box-shadow: 0.3125em 0.3125em 0.6875em rgba(0,0,0,0.42)
+}
+input[type=text], input[type=submit], input[type=radio],  #state {
+	border: 1px solid #ddd;
+	background: white;
+	border-radius: 2px;
+	padding: 3px;
+	margin: 0;
+	margin-bottom: 10px;
+	color: #555;
+}
+label, input, select {
+    display:inline-block;
+}
+label {
+	width: 20%;
+    text-align: right;
+	margin-right: 10px;
+}

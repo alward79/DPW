@@ -15,10 +15,17 @@ class MainHandler(webapp2.RequestHandler):#declaring a class
         <html>
             <head>
                 <title>Simple Form</title>
+                <link href="css/style.css" rel="stylesheet">
+
             </head>
             <body>'''
         #page body is the form where the user inputs information into the fields
-        page_body =  '''<form method="GET">
+        page_body =  '''
+                <h1><center>Digital Zoom</center></h1>
+                <h3>The Smarter Way to Buy</h3>
+                <h3>Wheter you want to know about a simple camera you can slip into your pocket,  one with interchangeable lenses and plenty of controls, or something in between, we have it all.</h3>
+                <form method="GET">
+                <h2>Register Now</h2>
                     <label>Full Name </label> <input type="text" name="first" placeholder="First Name"/><input type="text" name="last" placeholder="Last Name"/></br>
                     <label>Email </label> <input type="text" name="email"/></br>
                     <label>Address </label>
