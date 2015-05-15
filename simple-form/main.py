@@ -23,10 +23,10 @@ class MainHandler(webapp2.RequestHandler):#declaring a class
                     <label>Email </label> <input type="text" name="email"/></br>
                     <label>Address </label>
                         <input type="text" name="address" placeholder="Street Address"/>
-                        <input type="text" name="address" placeholder="Street Address Line 2"/>
+                        <input type="text" name="address2" placeholder="Street Address Line 2"/>
                         <input type="text" name="city" placeholder="City" /></br>
                     <label>State </label>
-                    <select class="half-size" name="address_state" id="state" required>
+                    <select class="half-size" name="state" id="state" required>
 					<option value="AL">AL</option>
 					<option value="AK">AK</option>
 					<option value="AZ">AZ</option>
@@ -95,13 +95,35 @@ class MainHandler(webapp2.RequestHandler):#declaring a class
             </body>
         </html>
         '''
+        page_error =''' <h3>The must be completed to continue</h3>'''
+        #this if statement checks to see if a request was made from the page
+        if self.request.GET:
+            #If so this will ensure that the fields are not blank
+            if self.request.GET["first"] != "" and self.request.GET["last"] != "" and self.request.GET["email"] != "" and self.request.GET["address"] != "":
 
-        self.response.write(page_head +page_body+page_close) #print
+                #if the fields aren't blank this will store the users input
+                first_name = self.request.GET["first"]
+                last_name = self.request.GET["last"]
+                email = self.request.GET["email"]
+                address = self.request.GET["address"]
+                address2 = self.request.GET["address2"]
+                city = self.request.GET["city"]
+                state = self.request.GET["state"]
+                gender = self.request.GET["gender"]
 
-    def additional_function(self):
-        pass
+                #request handler that will output info to the browser this will only display what the user entered
+                self.response.write(page_head + page_close + 'First Name: ' + first_name + '</br>' + ' Last Name: ' + last_name + '</br>' +
+                                ' Email: ' + email +  '</br>' +' Address: ' + address  + address2 +' City: ' + city  + ' State: ' + state + '</br>' +' Gender: ' + gender)
 
-#nver touch this part of whats making python work within browser
+            else:  #request handler will display form again with error message if fields are left blank
+                self.response.write(page_head + page_error + page_body + page_close)
+
+        #request handler will display form if there had not been a request made
+        else:
+            self.response.write(page_head + page_body + page_close)
+
+
+#never touch this part of whats making python work within browser
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
