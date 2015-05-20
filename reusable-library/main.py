@@ -1,8 +1,8 @@
 '''
 Angelena Ward
-5/15/2015
-Design Patterns for Web Programming - Online
 Reusable Library
+Design Patterns for Web Programming
+1/22/2015
 '''
 
 import webapp2
