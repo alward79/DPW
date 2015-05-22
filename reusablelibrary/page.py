@@ -34,7 +34,7 @@ class Page(object):#class to collect data though input.
     </body>
 </html> """
 
-    #response first view form class Page.
+    #first view form class Page.
     def print_out(self):
         result = self.head + self.body + self.close
         result = result.format(**locals())
@@ -72,7 +72,7 @@ class Results(object):
             </div>
 
         '''
-        #passing stored values to be viewed
+        #passing stored values to be viewed in browser
         self.info = Jewelry()
         self.display = '''
             <div id="response">
@@ -97,7 +97,7 @@ class Results(object):
         self.close = """
     </body>
 </html>"""
-    #function to print result
+    #function to print results
     def print_out_results(self):#function to response the second view showing results, according to condition from MainHandler.
         result = self.head + self.display + self.close
         result = result.format(**locals())
