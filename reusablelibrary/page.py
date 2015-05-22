@@ -57,8 +57,8 @@ class Results(object):
         #passing variable values from input
         self.body = '''
             <div id="form">
+                <h1>Jewelry Choice</h1>
                 <form method="GET" action="">
-                    <h1>Jewelry Choice</h1>
                     <p>Where you can find any type of handmade jewelry!</p>
                     <h3>Add your purchase</h3>
                     <p>Necklace is $10 <br/> Earrings are $5 <br/> Bracelet is $8</p>
@@ -78,19 +78,19 @@ class Results(object):
             <div id="response">
                 {self.info.message}
                 <ul>
-                    <li><label>Jewelry Choice: </label></li><li id="result">{self.response.jewelry}</li>
+                    <li><label>Jewelry Choice: </label></li><li id="result">{self.info.jewelry}</li>
                 </ul>
                 <ul>
-                    <li><label>Quantity: </label></li><li id="result">{self.response.jewelry}</li>
+                    <li><label>Quantity: </label></li><li id="result">{self.info.quantity}</li>
                 </ul>
                 <ul>
-                    <li><label>Price: </label></li><li id="result">{self.response.jewelry}</li>
+                    <li><label>Price: </label></li><li id="result">{self.info.price}</li>
                 </ul>
                 <ul>
-                    <li><label>Email: </label></li><li id="result">{self.response.jewelry}</li>
+                    <li><label>Email: </label></li><li id="result">{self.info.email}</li>
                 </ul>
                 <ul>
-                    <li><label>Total: </label></li><li id="result">{self.response.jewelry}</li>
+                    <li><label>Total: </label></li><li id="result">{self.info.total}</li>
                 </ul>
             </div>
         '''
