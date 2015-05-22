@@ -23,6 +23,7 @@ class MainHandler(webapp2.RequestHandler):
 
         #if statement to show data that's collected
         if self.request.GET:
+            j.jewelry = self.request.GET['jewel']
             j.price = self.request.GET['price']
             j.quantity = self.request.GET['quantity']
             j.email = self.request.GET['email']
