@@ -1,0 +1,38 @@
+body{
+    font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+    color: #069;
+    padding: 10%;
+    background-color: #CECECE;
+}
+/* #Typography
+================================================== */
+h1, h2{
+	font-family: 'Aguafina Script', cursive;
+	font-size: 60px;
+}
+/* #Forms
+================================================== */
+form {
+    width: 80%;
+    border: 1px solid #9d9da0;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 3px 4px 4px rgba(0,0,0,0.42);
+}
+label, input, select {
+    display:inline-block;
+}
+label{
+    width: 300px;
+    text-align: right;
+}
+input[type=text] {
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    padding: 5px;
+}
+input[type=submit], button {
+    cursor: pointer;
+}
