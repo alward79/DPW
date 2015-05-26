@@ -4,7 +4,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = FormPage() # This needs to refer to the submost class you are wanting to use
         p.inputs = [['first_name', 'text', 'First Name'], ['last_name', 'text', 'Last Name'], ['Submit', 'submit']]
-        self.response.write(p.print_out_form())
+        self.response.write(p.print_out())
 
 class Page(object):  # Borrowing stuff from object class
     def __init__(self):
@@ -58,7 +58,8 @@ class FormPage(Page):
 
         print self._form_inputs
 
-    def print_out_form(self):
+    #polymorphism Alert ------- method overriding
+    def print_out(self):
         return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
 app = webapp2.WSGIApplication([
