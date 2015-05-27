@@ -31,8 +31,13 @@ class Content(Page):
             <a href="?team=toronto">Toronto Raptors</a>
             <a href="?team=washington">Washington Wizards</a>
         </div>
-
+        
         <div id="team_links">
             <p>Western Conference</p>
+            <a href="?team=golden_state">Golden State Warriors</a>
+            <a href="?team=houston">Houston Rockets</a>
+            <a href="?team=clippers">Los Angeles Clippers</a>
+            <a href="?team=portland">Portland Trail Blazers</a>
+            <a href="?team=memphis">Memphis Grizzlies</a>
         </div>
         '''
