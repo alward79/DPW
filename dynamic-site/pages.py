@@ -6,7 +6,7 @@ class Page(object):
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>NBA Top 5 Teams</title>
+		<title>NBA Top Teams</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" >
 	</head>
 	<body>'''
