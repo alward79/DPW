@@ -25,6 +25,11 @@ class Content(Page):
         self.links = '''
         <div id="team_links">
             <p>Eastern Conference</p>
+            <a href="?team=atlanta">Atlanta Hawks</a>
+            <a href="?team=cleveland">Cleveland Cavaliers</a>
+            <a href="?team=chicago">Chicago Bulls</a>
+            <a href="?team=toronto">Toronto Raptors</a>
+            <a href="?team=washington">Washington Wizards</a>
         </div>
 
         <div id="team_links">
