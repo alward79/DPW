@@ -10,7 +10,12 @@ class Page(object):
 		<link href="css/style.css" rel="stylesheet" type="text/css" >
 	</head>
 	<body>'''
-	    self.body = ''
-	    self.close = '''
-	</body>
+        self.body = ''
+        self.close = '''
+    </body>
 </html>'''
+
+#subclass
+class Content(Page):
+    def __init__(self):
+        super(Content, self).__init__()
