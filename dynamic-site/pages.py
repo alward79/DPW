@@ -2,7 +2,7 @@
 class Page(object):
     def __init__(self):
         #html elements
-        self.head = '''
+        self._head = '''
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,8 +10,8 @@ class Page(object):
 		<link href="css/style.css" rel="stylesheet" type="text/css" >
 	</head>
 	<body>'''
-        self.body = ''
-        self.close = '''
+        self._body = ''
+        self._close = '''
     </body>
 </html>'''
 

@@ -8,4 +8,27 @@ class TopTeams(object):
         self.__home_game = 0
         self.__road_game = 0
 
+#class with instances of objects
+class Data(object):
+    def __init__(self):
+        #eastern team instance
+        atlanta = TopTeams() #attribute that will store values of atlanta
 
+        cleveland = TopTeams() #attribute to store values for cleveland
+
+        chicago = TopTeams() #attribute to store values for chicago
+
+        toronto = TopTeams() #attribute to store values for toronto
+
+        washington = TopTeams() #attribute to store values for washington
+
+        #western team instance
+        golden_state = TopTeams()#attribute to store values for golden state
+
+        houston = TopTeams() #attribute to store values for houston
+
+        clippers = TopTeams() #attribute to store values for LA clippers
+
+        portland = TopTeams() #attribute to store values for portland
+
+        memphis = TopTeams() #attribute to store values for memphis
