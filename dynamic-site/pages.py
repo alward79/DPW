@@ -48,3 +48,16 @@ class Content(Page):
                 <h3>Choose Conference From Above</h3>
             </div>
         '''
+        #will contain html
+        self._results = ''
+        self._close_results = '''</div>'''#close results div
+
+    @property
+    def results(self):
+        pass
+
+     #calculate teams Percent
+	def __calc_pct(self, perc):
+        pct = float(perc.wins) / float(perc.wins + perc.losses)#divide wins by wins+losses(total games)
+        win_percentage = round(pct, 3)#round results 3 places
+        return win_percentage#returns value of ptc to printed
