@@ -22,7 +22,7 @@ class Content(Page):
         super(Content, self).__init__()
 
         #this will link the teams to buttons to return info
-        self.links = '''
+        self._links = '''
         <div id="team_links">
             <p>Eastern Conference</p>
             <a href="?team=atlanta">Atlanta Hawks</a>
@@ -42,22 +42,47 @@ class Content(Page):
         </div>
         '''
         #static elements that will show before a team is clicked on
-        self.info = '''
+        self._info = '''
             <div id="info">
                 <h1>NBA TOP TEAMS</h1>
                 <h3>Choose Conference From Above</h3>
             </div>
         '''
-        #will contain html
+        #will contain html from the getter
         self._results = ''
-        self._close_results = '''</div>'''#close results div
+        self._close_results = '''
+        '''
 
     @property
     def results(self):
         pass
 
-     #calculate teams Percent
-	def __calc_pct(self, perc):
+    #calculate teams Percent
+    def __calc_pct(self, perc):
         pct = float(perc.wins) / float(perc.wins + perc.losses)#divide wins by wins+losses(total games)
         win_percentage = round(pct, 3)#round results 3 places
         return win_percentage#returns value of ptc to printed
+
+    #setter to set self._results to html elements
+    @results.setter
+    def results(self, info):
+        win_percentage = self.__calc_pct(info)#pass obj to self.__calc_ptc(obj)
+
+        self._results += '''<div id="team">\n'''#open div to hold data for team info
+        self._results += '''<h1>''' + info.team_name + '''</h1>\n'''#attribute to receive data for team name
+        self._results += '''<img src="''' + info.img + '''" alt="team_img">\n			'''#attribute to receive data for team img
+        self._results += '''</div>\n'''#closs team info dive
+        self._results += '''<div id="stats">\n'''#open div to hold data for team stats
+        self._results += '<h2><strong>Wins: </strong> ' + str(info.wins) + '</h2>\n	'''#attribute to receive data for team wins (bold print)
+        self._results += '<h2 class="odd"><strong>Losses: </strong> ' + str(info.losses) + '</h2>\n	'''#attribute to receive data for team losses(bold print)
+        self._results += '<h2><strong>Home Record: </strong> ' + str(info.home_game) + '</h2>\n	'''#attribute to receive data for team home game record
+        self._results += '<h2 class="odd"><strong>Road Record: </strong> ' + str(info.road_game) + '</h2>\n	'''#attribute to receive data for team away game record
+        self._results += '<h2><strong>Win Percentage: </strong> ' + str(win_percentage) + '</h2>\n '''#attribute to receive data for team ptc from function __calc_ptc
+        self._results += '''</div>\n '''#close stats div
+
+    def print_out(self):#prints to browser
+        return self._head + self._links + self._info + self._close_results + self._close
+
+    #returns html elements to be written to browser
+    def print_out_result(self):
+        return self._head + self._links + self._results + self._close_results + self._close
