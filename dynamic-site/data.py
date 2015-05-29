@@ -32,3 +32,9 @@ class Data(object):
         portland = TopTeams() #attribute to store values for portland
 
         memphis = TopTeams() #attribute to store values for memphis
+
+        #array containing team instances
+        self.eteam_array = [atlanta, cleveland, chicago, toronto, washington]
+
+        #array containing team instances
+        self.wteam_array = [golden_state, houston, clippers, portland, memphis]

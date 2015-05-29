@@ -9,11 +9,12 @@ class Jewelry(object):
         self.__total = 0 #Private attribute
         self.message = ''
 
-    #getter and setter that gives the access to the total
+    #getter for the total so it can be accees by other functions
     @property
     def total(self):
         return self.__total
 
+    #setter for total so outside functions can change the value of it    
     @total.setter
     def total(self, new_total):
         self.__total = new_total
@@ -25,38 +26,42 @@ class Jewels(object):
         self.__message = ''
         self.__total = 0
 
-    #getter and setter that gives the access to the first message
+    #getter for question so it can be accessed by the questions function
     @property
     def question(self):
         return self.__question
 
+    #setter so question() can access and change the question (attribute) value 
     @question.setter
     def question(self, new_question):
         self.__question = new_question
 
-    #function to return message
+    #function to return message to be stored as the new question value
     def question_answer(self):
         self.__question = 'Did find something you like? If not be sure to leave your email.'
         return self.__question
 
+    #getter for the total so it can be accees by other functions
     @property
     def total(self):
         return self.__total
 
+    #setter for total so outside functions can change the value of it 
     @total.setter
     def total(self, new_total):
         self.__total = new_total
 
-    #returns the result of price * quantity that was entered by user
+    #when a total is entered this function will run to calculate the total price of the items the user entered
     def total_price(self, price, quantity):
         self.__total = int(price) * int(quantity)
         return self.__total
 
-    #getter gives the access to read message
+    #getter gives the access to read message from other functions
     @property
     def message(self):
         return self.__message
-    #setter gives access to update the second message attribute
+    
+    #setter gives access to update the message attribute
     @message.setter
     def message(self, new_message):
         self.__message = new_message

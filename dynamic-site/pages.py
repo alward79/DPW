@@ -31,7 +31,7 @@ class Content(Page):
             <a href="?team=toronto">Toronto Raptors</a>
             <a href="?team=washington">Washington Wizards</a>
         </div>
-        
+
         <div id="team_links">
             <p>Western Conference</p>
             <a href="?team=golden_state">Golden State Warriors</a>
@@ -40,4 +40,11 @@ class Content(Page):
             <a href="?team=portland">Portland Trail Blazers</a>
             <a href="?team=memphis">Memphis Grizzlies</a>
         </div>
+        '''
+        #static elements that will show before a team is clicked on
+        self.info = '''
+            <div id="info">
+                <h1>NBA TOP TEAMS</h1>
+                <h3>Choose Conference From Above</h3>
+            </div>
         '''

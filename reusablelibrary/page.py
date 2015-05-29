@@ -2,8 +2,10 @@ from lib import Jewelry
 
 class Page(object):#class to collect data though input.
     def __init__(self):
+        #default title and css link
         self.title = "Welcome Accessories and more"
         self.css = "css/style.css"
+        #head of the html that will diplay title and css
         self.head = """
 <!DOCTYPE HTML>
 <html>
@@ -13,7 +15,7 @@ class Page(object):#class to collect data though input.
     </head>
     <body>
         """
-
+        #html the will store the form the user has to fill out
         self.body = '''
             <div id="form">
                 <form method="GET" action="">
@@ -30,11 +32,12 @@ class Page(object):#class to collect data though input.
                 </form>
             </div>
         '''
+        #closing section of html
         self.close = """
     </body>
 </html> """
 
-    #first view form class Page.
+    #first view form class Page that will show head body and close and return the info.
     def print_out(self):
         result = self.head + self.body + self.close
         result = result.format(**locals())
@@ -43,7 +46,7 @@ class Page(object):#class to collect data though input.
 #display second view with results depending on results from MainHandler.
 class Results(object):
     def __init__(self):
-        self.title = "Welcome to Book Choice"
+        self.title = "Welcome Accessories and more"
         self.css = "css/style.css"
         self.head = """
 <!DOCTYPE HTML>
