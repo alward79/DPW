@@ -49,7 +49,6 @@ class Content(Page):
         self._info = '''
             <div id="info">
                 <h1>NBA TOP TEAMS</h1>
-                <h3>Choose Conference From Above</h3>
             </div>
         '''
         #will contain html from the getter
@@ -73,7 +72,7 @@ class Content(Page):
         win_percentage = self.__calc_pct(info)#pass obj to self.__calc_ptc(obj)
 
         self._results += '''    <div id="team_info">\n  '''#open div to hold data for team info
-        self._results += '''<h1>''' + info.team_name + '''</h1>\n           '''#attribute to receive data for team name
+        self._results += '''<h2 id="name">''' + info.team_name + '''</h2>\n           '''#attribute to receive data for team name
         self._results += '''    <img src="''' + info.img + '''" alt="team_img">\n           '''#attribute to receive data for team img
         self._results += '''</div>\n        '''#closs team info dive
         self._results += '''    <div id="team_stats">\n             '''#open div to hold data for team stats
@@ -85,8 +84,8 @@ class Content(Page):
         self._results += '''</div>\n        '''#close stats div
 
     def print_out(self):#prints to browser
-        return self._head + self._links + self._info + self._close_results + self._close
+        return self._head + self._info + self._links + self._close_results + self._close
 
     #returns html elements to be written to browser
     def print_out_result(self):
-        return self._head + self._links + self._results + self._close_results + self._close
+        return self._head + self._info + self._links + self._results + self._close_results + self._close
