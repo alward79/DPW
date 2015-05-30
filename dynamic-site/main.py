@@ -23,7 +23,7 @@ class MainHandler(webapp2.RequestHandler):
             #sending objects to setter
             if team == "atlanta":#button to request data
                 print data.eteam_array[0]#print data from class Data on the 1st position of the array.
-                page.result = data.eteam_array[0]#sending objects to setter of 1st array to team link
+                page.results = data.eteam_array[0]#sending objects to setter of 1st array to team link
             elif team == "cleveland":#button to request data
                 print data.eteam_array[1]#print data from class Data on the 2nd position of the array.
                 page.result = data.eteam_array[1]#sending objects to setter of 2nd array to team link

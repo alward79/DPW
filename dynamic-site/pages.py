@@ -5,11 +5,11 @@ class Page(object):
         self._head = '''
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>NBA Top Teams</title>
-		<link href="css/style.css" rel="stylesheet" type="text/css" >
-	</head>
-	<body>'''
+    <head>
+        <title>NBA Top Teams</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" >
+    </head>
+    <body>'''
         self._body = ''
         self._close = '''
     </body>
@@ -72,17 +72,17 @@ class Content(Page):
     def results(self, info):
         win_percentage = self.__calc_pct(info)#pass obj to self.__calc_ptc(obj)
 
-        self._results += '''	<div id="team_info">\n	'''#open div to hold data for team info
-        self._results += '''<h1>''' + info.team_name + '''</h1>\n			'''#attribute to receive data for team name
-        self._results += '''	<img src="''' + info.img + '''" alt="team_img">\n			'''#attribute to receive data for team img
-        self._results += '''</div>\n		'''#closs team info dive
-        self._results += '''	<div id="team_stats">\n				'''#open div to hold data for team stats
-        self._results += '<h2><strong>Wins: </strong> ' + str(info.wins) + '</h2>\n				'''#attribute to receive data for team wins (bold print)
-        self._results += '<h2 class="odd"><strong>Losses: </strong> ' + str(info.losses) + '</h2>\n				'''#attribute to receive data for team losses(bold print)
-        self._results += '<h2><strong>Home Record: </strong> ' + str(info.home_game) + '</h2>\n				'''#attribute to receive data for team home game record
-        self._results += '<h2 class="odd"><strong>Road Record: </strong> ' + str(info.road_game) + '</h2>\n				'''#attribute to receive data for team away game record
-        self._results += '<h2><strong>Win Percentage: </strong> ' + str(win_percentage) + '</h2>\n			'''#attribute to receive data for team ptc from function __calc_ptc
-        self._results += '''</div>\n		'''#close stats div
+        self._results += '''    <div id="team_info">\n  '''#open div to hold data for team info
+        self._results += '''<h1>''' + info.team_name + '''</h1>\n           '''#attribute to receive data for team name
+        self._results += '''    <img src="''' + info.img + '''" alt="team_img">\n           '''#attribute to receive data for team img
+        self._results += '''</div>\n        '''#closs team info dive
+        self._results += '''    <div id="team_stats">\n             '''#open div to hold data for team stats
+        self._results += '<h2><strong>Wins: </strong> ' + str(info.wins) + '</h2>\n             '''#attribute to receive data for team wins (bold print)
+        self._results += '<h2 class="odd"><strong>Losses: </strong> ' + str(info.losses) + '</h2>\n             '''#attribute to receive data for team losses(bold print)
+        self._results += '<h2><strong>Home Record: </strong> ' + str(info.home_game) + '</h2>\n             '''#attribute to receive data for team home game record
+        self._results += '<h2 class="odd"><strong>Road Record: </strong> ' + str(info.road_game) + '</h2>\n             '''#attribute to receive data for team away game record
+        self._results += '<h2><strong>Win Percentage: </strong> ' + str(win_percentage) + '</h2>\n          '''#attribute to receive data for team ptc from function __calc_ptc
+        self._results += '''</div>\n        '''#close stats div
 
     def print_out(self):#prints to browser
         return self._head + self._links + self._info + self._close_results + self._close
